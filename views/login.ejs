@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- Modal body part -->
+		<div class="modal__body">
+			<h3 class="modal__heading">Sign in here</h3>
+			<hr />
+			<form action="/login" method="POST" class="modal__form">
+				<label class="modal__email ipt__title">Your email</label>
+				<input
+					type="email"
+					name="email"
+					class="modal__ipt ipt__email"
+					placeholder="Your email"
+				/>
+				<label class="modal__password ipt__title"
+					>Your account password</label
+				>
+				<input
+					type="password"
+					name="password"
+					class="modal__ipt ipt__password"
+					placeholder="Your password"
+				/>
+
+				<span class="register">
+					<button type="submit" class="btn__register">Login</button>
+				</span>
+				<hr />
+				<br />
+				<span>
+					<a href="/register" class="btn__register"
+						>Create an account</a
+					>
+				</span>
+				<hr />
+				<br />
+				<span>
+					<a href="/auth/github" class="btn__register"
+						>Sign in with Github</a
+					>
+				</span>
+			</form>
+		</div>
+		<!-- Modal body part end -->
+	</body>
+</html>

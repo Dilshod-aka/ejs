@@ -1,0 +1,48 @@
+.modal__body {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 100;
+
+	border-radius: 10px;
+	background-color: #808080;
+	padding: 10px;
+	width: 400px;
+}
+
+.modal__heading {
+	text-align: center;
+	color: #fff;
+	margin: 0;
+}
+
+.modal__form {
+	display: flex;
+	flex-direction: column;
+	width: 65%;
+}
+
+.ipt__title {
+	color: rgb(99, 243, 74);
+	margin-bottom: 3px;
+}
+
+.modal__ipt {
+	padding: 8px;
+	border-radius: 8px;
+	border: none;
+	outline: none;
+	margin-bottom: 10px;
+}
+
+.register {
+	display: flex;
+}
+
+.btn__register {
+	border-radius: 5px;
+	border: none;
+	padding: 5px;
+	background-color: rgb(147, 247, 86);
+}

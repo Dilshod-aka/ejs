@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container header-container">
+				<h1 class="header-link">BLOG</h1>
+
+				<ul class="header-list">
+					<li class="header-item">
+						<a class="list-link" href="/posts">Create post</a>
+					</li>
+				</ul>
+
+				<div class="link-wrapper">
+					<a class="signin btns" href="/login">Sign in</a>
+					<a class="signup btns fire-on-hover" href="/register"
+						>Sign up</a
+					>
+				</div>
+			</div>
+		</header>
+		<div class="container">
+			<section class="article">
+				<!-- Article content part -->
+				<div class="article__wrapper">
+					<h2 class="article__wrapper--heading">Barcha postlar</h2>
+					<!-- Article left part -->
+					<div class="article__box--holder">
+						<% for(let post of posts) {%>
+						<div class="article__box">
+							<div class="article__content">
+								<h2 class="article__title">
+									<%= post.title %>
+								</h2>
+								<p class="article__text">
+									<%= post.description %>
+								</p>
+								<span class="article__source">
+									<time class="time" datetime="12:25"
+										><%= new
+										Date(post.created_at).getHours()+":"+new
+										Date(post.created_at).getMinutes()
+										%></time
+									>
+								</span>
+							</div>
+							<a
+								href="/posts/<%= post.postid %>"
+								id="boxLink"
+								class="box__link"
+							>
+								<span class="visually-hidden"
+									>Open link here</span
+								>
+							</a>
+						</div>
+						<%}%>
+					</div>
+					<!-- Article box end -->
+					<!-- Article left part end -->
+				</div>
+			</section>
+		</div>
+	</body>
+</html>

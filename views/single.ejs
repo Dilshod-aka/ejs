@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<header class="header">
+			<div class="container header-container">
+				<h1 class="header-link">BLOG</h1>
+
+				<ul class="header-list">
+					<li class="header-item">
+						<a class="list-link" href="/posts">Create post</a>
+					</li>
+				</ul>
+
+				<div class="link-wrapper">
+					<a class="signin btns" href="/login">Sign in</a>
+					<a class="signup btns fire-on-hover" href="/register"
+						>Sign up</a
+					>
+				</div>
+			</div>
+		</header>
+		<div class="container">
+			<h1 class="single__page">Single post page</h1>
+			<% for(let data of post) {%>
+			<div class="post">
+				<h2><%= data.title %></h2>
+				<p><%= data.content %></p>
+				<p class="time">
+					<%= new Date(data.created_at).getHours()+":"+new
+					Date(data.created_at).getMinutes() %>
+				</p>
+			</div>
+			<%}%>
+		</div>
+	</body>
+</html>

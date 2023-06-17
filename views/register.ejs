@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="/css/main.css" />
+		<title>Document</title>
+	</head>
+	<body>
+		<!-- Modal body part -->
+		<div class="modal__body">
+			<h3 class="modal__heading">Register here</h3>
+			<hr />
+			<form action="/register" method="POST" class="modal__form">
+				<label class="modal__name ipt__title">Your username</label>
+				<input
+					type="text"
+					name="username"
+					class="modal__ipt ipt__name"
+					placeholder="Username"
+				/>
+				<label class="modal__password ipt__title"
+					>Your account password</label
+				>
+				<input
+					type="password"
+					name="password"
+					class="modal__ipt ipt__password"
+					placeholder="Password"
+				/>
+				<label class="modal__email ipt__title">Your e-mail</label>
+				<input
+					type="email"
+					name="email"
+					class="modal__ipt ipt__email"
+					placeholder="E-mail"
+				/>
+				<span class="register">
+					<button type="submit" class="btn__register">
+						Register
+					</button>
+				</span>
+				<br />
+				<span>
+					<a href="/login" class="btn__register">I have an account</a>
+				</span>
+			</form>
+		</div>
+		<!-- Modal body part end -->
+	</body>
+</html>
